@@ -1,4 +1,7 @@
+"use client";
 import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const pricingPlans = [
   {
@@ -36,22 +39,33 @@ const pricingPlans = [
   },
 ];
 
+const notify = () => {
+  toast.info("Sorovingiz jo'natildi");
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  notify();
+};
+
 const PricingTables = () => {
   return (
-    <div className="bg-gray-100 p-8">
-      <h2 className="text-3xl font-bold text-center mb-6">
+    <div id="pricing" className="bg-gray-100 p-4 sm:p-8">
+      <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
         Bizning narx rejalarimiz
       </h2>
-      <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+      <div className="container mx-auto flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-6">
         {pricingPlans.map((plan, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-lg w-full md:w-1/3"
+            className="bg-white p-4 sm:p-6 rounded-lg shadow-lg w-full lg:w-1/3"
           >
-            <h3 className="text-2xl font-bold mb-4 text-center">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 text-center">
               {plan.title}
             </h3>
-            <p className="text-xl font-bold mb-4 text-center">{plan.price}</p>
+            <p className="text-lg sm:text-xl font-bold mb-4 text-center">
+              {plan.price}
+            </p>
             <ul className="mb-6">
               {plan.features.map((feature, idx) => (
                 <li key={idx} className="flex items-center mb-2 text-gray-700">
@@ -73,12 +87,16 @@ const PricingTables = () => {
                 </li>
               ))}
             </ul>
-            <button className="w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+            <button
+              onClick={handleSubmit}
+              className="w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-200"
+            >
               Sotib olish
             </button>
           </div>
         ))}
       </div>
+      <ToastContainer />
     </div>
   );
 };
