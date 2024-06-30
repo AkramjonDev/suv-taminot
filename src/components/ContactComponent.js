@@ -31,7 +31,7 @@ const ContactComponent = () => {
         onSubmit={handleSubmit}
       >
         <label htmlFor="name" className="text-gray-700 font-semibold">
-          Имя
+          Ism
         </label>
         <input
           type="text"
@@ -42,7 +42,7 @@ const ContactComponent = () => {
           className="p-3 border border-gray-300 rounded-lg outline-none"
         />
         <label htmlFor="phone" className="text-gray-700 font-semibold">
-          Номер телефона
+          Telefon raqam
         </label>
         <input
           type="tel"
@@ -53,7 +53,7 @@ const ContactComponent = () => {
           className="p-3 border border-gray-300 rounded-lg outline-none"
         />
         <label htmlFor="message" className="text-gray-700 font-semibold">
-          Сообщение
+          Qoshimcha savol
         </label>
         <textarea
           id="message"
@@ -66,7 +66,7 @@ const ContactComponent = () => {
           type="submit"
           className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
         >
-          Отправить
+          Jo'natish
         </button>
       </form>
     </div>
