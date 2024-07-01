@@ -16,3 +16,12 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+.div-logo:hover img {
+  transform: rotateY(3600deg);
+  transition: transform 20s linear;
+}
+@media screen and (max-width: 640px) {
+  .div-logo {
+    zoom: 0.6;
+  }
+}

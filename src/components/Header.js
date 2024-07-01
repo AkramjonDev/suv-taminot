@@ -8,10 +8,9 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-blue-500 shadow-md">
       <nav className="container mx-auto flex items-center justify-between p-4">
-        <div className="text-2xl font-bold tracking-widest text-white">
+        <Link href={"/"} className="text-2xl font-bold tracking-widest text-white">
           SUV TA'MINOT
-        </div>
-        {/* Hamburger Button */}
+        </Link>
         <div className="md:hidden">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -31,14 +30,13 @@ const Header = () => {
                 strokeWidth="2"
                 d={
                   isMenuOpen
-                    ? "M6 18L18 6M6 6l12 12" // "X" shape when menu is open
-                    : "M4 6h16M4 12h16M4 18h16" // Hamburger lines when menu is closed
+                    ? "M6 18L18 6M6 6l12 12"
+                    : "M4 6h16M4 12h16M4 18h16"
                 }
               />
             </svg>
           </button>
         </div>
-        {/* Menu Links */}
         <ul
           className={`fixed inset-0 top-[4rem] bg-blue-500 md:static md:flex md:items-center md:space-x-6 transition-transform duration-300 ease-in-out ${
             isMenuOpen ? "translate-y-0" : "translate-y-full md:translate-y-0"
@@ -62,6 +60,13 @@ const Header = () => {
             <Link href="#contact" onClick={() => setIsMenuOpen(false)}>
               <p className="block px-4 py-2 hover:text-gray-300 text-white">
                 KONTAKTLAR
+              </p>
+            </Link>
+          </li>
+          <li className="text-center md:text-left">
+            <Link href="/documents" onClick={() => setIsMenuOpen(false)}>
+              <p className="block px-4 py-2 hover:text-gray-300 text-white">
+                HUJJATLAR
               </p>
             </Link>
           </li>
