@@ -86,7 +86,7 @@ const ContactComponent = () => {
           value={formData.firstName}
           onChange={handleInputChange}
           required
-          className="p-3 border border-gray-300 rounded-lg outline-none"
+          className="p-3 border border-gray-300 rounded-lg outline-none bg-white"
         />
         <label htmlFor="phoneNumber" className="text-gray-700 font-semibold">
           Telefon raqam
@@ -98,7 +98,7 @@ const ContactComponent = () => {
           value={formData.phoneNumber}
           onChange={handleInputChange}
           required
-          className="p-3 border border-gray-300 rounded-lg outline-none"
+          className="p-3 border border-gray-300 rounded-lg outline-none bg-white"
         />
         <label htmlFor="data" className="text-gray-700 font-semibold">
           Qo'shimcha savol
@@ -109,7 +109,7 @@ const ContactComponent = () => {
           value={formData.data}
           onChange={handleInputChange}
           required
-          className="p-3 border border-gray-300 rounded-lg h-32 outline-none"
+          className="p-3 border border-gray-300 rounded-lg h-32 outline-none bg-white"
         ></textarea>
         <button
           type="submit"
