@@ -10,7 +10,7 @@ const Footer = () => {
           <p className="mb-2 md:mb-0">
             &copy; 2024 Suv Ta'minot. Barcha huquqlar himoyalangan.
           </p>
-          <p className="text-sm">Aloqa uchun: +998918317242</p>
+          <p className="text-sm">Aloqa uchun: +998 88 663 30 00</p>
         </div>
         <Link
           href="https://t.me/shox_dev"

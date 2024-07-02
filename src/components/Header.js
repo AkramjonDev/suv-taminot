@@ -8,8 +8,11 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-blue-500 shadow-md">
       <nav className="container mx-auto flex items-center justify-between p-4">
-        <Link href={"/"} className="text-2xl font-bold tracking-widest text-white">
-          SUV TA'MINOT
+        <Link
+          href={"/"}
+          className="text-2xl font-bold tracking-widest text-white"
+        >
+          "SHOXIMARDON RAMZIDDIN SERVIS" MCHJ
         </Link>
         <div className="md:hidden">
           <button
