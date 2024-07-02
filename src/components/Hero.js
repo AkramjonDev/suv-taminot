@@ -20,7 +20,7 @@ const Hero = () => {
             uchun ishonchli va toza suv ta'minot hizmatlarini taklif qilamiz.
           </p>
           <Link
-            href="tel:+998918317242"
+            href="tel:+998886633000"
             className="mt-6 px-6 py-3 bg-blue-500 hover:bg-blue-700 rounded-full text-lg"
           >
             Manager bilan bog'lanish
