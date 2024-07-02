@@ -12,7 +12,7 @@ const Header = () => {
           href={"/"}
           className="text-2xl font-bold tracking-widest text-white"
         >
-          "SHOXIMARDON RAMZIDDIN SERVIS" MCHJ
+          SHOXIMARDON RAMZIDDIN SERVIS
         </Link>
         <div className="md:hidden">
           <button
@@ -46,21 +46,21 @@ const Header = () => {
           } md:flex-row md:space-y-0 md:opacity-100 md:translate-y-0 flex-col items-center space-y-4`}
         >
           <li className="text-center md:text-left">
-            <Link href="#news" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/#news" onClick={() => setIsMenuOpen(false)}>
               <p className="block px-4 py-2 hover:text-gray-300 text-white">
                 YANGILIKLAR
               </p>
             </Link>
           </li>
           <li className="text-center md:text-left">
-            <Link href="#pricing" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/#pricing" onClick={() => setIsMenuOpen(false)}>
               <p className="block px-4 py-2 hover:text-gray-300 text-white">
                 NARXLARIMIZ
               </p>
             </Link>
           </li>
           <li className="text-center md:text-left">
-            <Link href="#contact" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/#contact" onClick={() => setIsMenuOpen(false)}>
               <p className="block px-4 py-2 hover:text-gray-300 text-white">
                 KONTAKTLAR
               </p>
