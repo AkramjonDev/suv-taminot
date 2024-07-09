@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -9,15 +10,6 @@ const standardPlan = {
   description:
     "O'zbekiston Respublikasi Moliya vazirligi tomonidan shartnoma va ruxsatnoma",
   images: ["/documents/narxlar.jpg", "/documents/moliya.jpg"],
-};
-
-const notify = () => {
-  toast.info("Sorovingiz jo'natildi");
-};
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-  notify();
 };
 
 const PricingTable = () => {
@@ -62,12 +54,11 @@ const PricingTable = () => {
               </div>
             )}
           </div>
-          <button
-            onClick={handleSubmit}
-            className="w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-200 mt-4"
-          >
-            Servisdan foydalanish
-          </button>
+          <Link href={"#contact"} className="">
+            <p className="w-full py-2 flex justify-center bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-200 mt-4">
+              Servisdan foydalanish
+            </p>
+          </Link>
         </div>
       </div>
       <ToastContainer />
