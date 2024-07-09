@@ -12,10 +12,10 @@ const Hero = () => {
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
-          <h1 className="text-4xl md:text-6xl font-bold">
+          <h1 className="text-4xl md:text-6xl font-bold text-white">
             Tabiiy suv ta'minoti va tozalash echimlari
           </h1>
-          <p className="mt-4 text-xl md:text-2xl">
+          <p className="mt-4 text-xl md:text-2xl text-white">
             Yuqori sifatli tabiiy suv va keng qamrovli suv bilan ta'minlash
             uchun ishonchli va toza suv ta'minot hizmatlarini taklif qilamiz.
           </p>

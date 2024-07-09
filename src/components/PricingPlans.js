@@ -1,18 +1,14 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const standardPlan = {
-  title: "Standard",
+  title: "Narxlar va narxlar bo'yicha shartnomalar",
   price: "580 so'm/kub",
-  features: [
-    "2 soatlik konsultatsiya",
-    "Ilg'or suv tozalash xizmatlari",
-    "Ikki haftalik texnik tekshiruvlar",
-    "Telefon va elektron pochta orqali yordam",
-    "Har chorakda tizimni baholash",
-  ],
+  description:
+    "O'zbekiston Respublikasi Moliya vazirligi tomonidan shartnoma va ruxsatnoma",
+  images: ["/documents/narxlar.jpg", "/documents/moliya.jpg"],
 };
 
 const notify = () => {
@@ -25,6 +21,12 @@ const handleSubmit = (e) => {
 };
 
 const PricingTable = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleAccordion = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div id="pricing" className="bg-gray-100 p-4 sm:p-8">
       <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
@@ -38,32 +40,33 @@ const PricingTable = () => {
           <p className="text-lg sm:text-xl font-bold mb-4 text-center">
             {standardPlan.price}
           </p>
-          <ul className="mb-6">
-            {standardPlan.features.map((feature, idx) => (
-              <li key={idx} className="flex items-center mb-2 text-gray-700">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-green-500 mr-2"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                {feature}
-              </li>
-            ))}
-          </ul>
+          <p className="text-center mb-4">{standardPlan.description}</p>
+          <div className="accordion">
+            <button
+              onClick={toggleAccordion}
+              className="w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-200"
+            >
+              Hujjatlarni ko'rish
+            </button>
+            {isOpen && (
+              <div className="mt-4">
+                {standardPlan.images.map((image, index) => (
+                  <div key={index} className="mb-4">
+                    <img
+                      src={image}
+                      alt={`Plan image ${index + 1}`}
+                      className="w-full rounded-lg"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
           <button
             onClick={handleSubmit}
-            className="w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-200"
+            className="w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-200 mt-4"
           >
-            Sotib olish
+            Servisdan foydalanish
           </button>
         </div>
       </div>
