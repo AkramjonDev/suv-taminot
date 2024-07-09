@@ -11,6 +11,17 @@ const documents = [
       "Ushbu shartnoma «Shohimardon Ramziddin servis» M.Ch.J shartnomasi",
     url: "/documents/Shartnoma 2024..docx",
   },
+  {
+    name: "Moliya vazirligi ruxsatnomasi",
+    description: "O'zbekiston Respublikasi Moliya vazirligi shartnomasi",
+    url: "/documents/moliya.jpg",
+  },
+  {
+    name: "Narxlar ruxsatnomasi",
+    description:
+      "O'zbekiston Respublikasi viloyat boshqarmasi narxlar ruxsatnomasi",
+    url: "/documents/narxlar.jpg",
+  },
 ];
 
 export default documents;
