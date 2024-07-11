@@ -22,6 +22,12 @@ const documents = [
       "O'zbekiston Respublikasi viloyat boshqarmasi narxlar ruxsatnomasi",
     url: "/documents/narxlar.jpg",
   },
+  {
+    name: "RAMZIDDIN SERVIS USTAVI",
+    description:
+      "Shoximardon Ramziddin Mas'ulyati cheklangan jamiyatining ustavi",
+    url: "/documents/USTAV_YANGI.pdf",
+  },
 ];
 
 export default documents;

@@ -8,7 +8,8 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4 px-4">
         <div className="text-center md:text-left">
           <p className="mb-2 md:mb-0 text-white">
-            &copy; "SHOXIMARDON RAMZIDDIN SERVIS" MCHJ. Barcha hizmatlar litsenziyalangan.
+            &copy; "SHOXIMARDON RAMZIDDIN SERVIS" MCHJ. Barcha hizmatlar
+            litsenziyalangan.
           </p>
           <p className="text-sm text-white">Aloqa uchun: +998 88 663 30 00</p>
         </div>
