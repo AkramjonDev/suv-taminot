@@ -1,5 +1,8 @@
 import React from "react";
 import documents from "../../data/documents";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDocker } from "@fortawesome/free-brands-svg-icons";
 
 const Downloads = () => {
   return (
@@ -14,14 +17,15 @@ const Downloads = () => {
             <div>
               <h2 className="text-xl font-semibold">{document.name}</h2>
               <p className="text-gray-600">{document.description}</p>
+              <FontAwesomeIcon icon={faDocker} />
             </div>
-            <a
+            <Link
               href={document.url}
               download
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
               Yuklab olish
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
